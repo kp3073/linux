@@ -1,5 +1,4 @@
 name=keyur
-read $name
 
 if [ "$name" = "keyur" ];
 then
