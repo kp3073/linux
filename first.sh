@@ -1,6 +1,6 @@
 name=keyur
 
-if [ "$name" = "keyur" ];
+if [ "$name" = "mark" ];
 then
   echo " name is regigisterd"
 else
