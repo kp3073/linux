@@ -1,4 +1,4 @@
-$name"keyur"
+$name=keyur
 read $name
 
 if [ "$name" = "keyur" ];
