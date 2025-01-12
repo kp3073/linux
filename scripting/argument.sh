@@ -1,8 +1,8 @@
 #!/bin/bash
 
-aws --version 2>/dev/null
+aws --version
 if [ $? -eq 0 ]; then
-    echo "AWD is installed"
+    echo "AWS is installed"
 else
-    echo "AWD is not installed"
+    echo "AWS is not installed"
 fi
