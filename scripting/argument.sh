@@ -2,7 +2,7 @@
 
 aws --version
 if [ $? -eq 0 ]; then
-    echo "AWS is installed"
+    aws ec2 describe-vpcs --query "Vpcs[].VpcId" --output text
 else
-    echo "AWS is not installed"
+    echo "vpc id not found"
 fi
