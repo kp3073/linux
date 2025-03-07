@@ -1,0 +1,26 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: foo-pv
+spec:
+  storageClassName: PVC
+  claimRef:
+    name: foo-pvc
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pv-pod
+spec:
+  volumes:
+    - name: vol
+      hostPath:
+        path: /TESTHOST
+  containers:
+    - name: pv-container
+      image: centos:7
+      command: ["sleep", "36000"]
+      volumeMounts:
+        - name: vol
+          mountPath: /TESTHOST
